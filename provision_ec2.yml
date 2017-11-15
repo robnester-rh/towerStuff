@@ -14,7 +14,7 @@
     ec2_instance_count: 1
     ec2_tag: demo_video
     wait_for_port: 22
-    ssh_key: 
+    ssh_key:
 
   tasks:
     - name: Launch AWS instances
