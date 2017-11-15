@@ -36,9 +36,3 @@
         port={{ wait_for_port }} delay=180 timeout=320 state=started
       with_items: "{{ ec2.instances }}"
 
-    - name: Add to ec2 inventory
-      local_action: lineinfile dest=hosts regexp="{{ item.public_dns_name }}" insertafter="[launched]" line="{{ item.public_dns_name }}"
-      with_items: "{{ ec2.instances }}"
-
-hosts file
-[launched]
