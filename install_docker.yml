@@ -3,4 +3,4 @@
   sudo: yes
 
   roles:
-    - { role: jgeuesbroek.docker, tags: ["docker"] }
+    - { role: docker }
