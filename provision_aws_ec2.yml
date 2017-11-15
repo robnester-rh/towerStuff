@@ -48,7 +48,7 @@
   become: True
   gather_facts: True
   roles:
-    - docker
+    - { role: jgeusebroek.docker, tags: ["demo_video"] }
 
 - name: Terminiate instances
   hosts: localhost
