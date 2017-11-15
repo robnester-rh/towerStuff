@@ -1,5 +1,7 @@
 ---
 - hosts: "{{ ec2.instances }}"
-- name: Install docker
-  import_roles: docker
-  with_items: "{{ ec2.instances }}"
+  sudo: yes
+
+  roles:
+    - { role: jgeuesbroek.docker, tags: ["docker"] }
+    with_items: "{{ ec2.instances }}"
