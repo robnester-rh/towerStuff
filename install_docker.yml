@@ -1,6 +1,6 @@
 ---
-- hosts: "{{ ec2.instances }}"
+- hosts: all
   sudo: yes
 
   roles:
-    - { role: docker }
+     - { role: jgeusebroek.docker, tags: ["demo_video"] }
