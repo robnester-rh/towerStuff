@@ -37,8 +37,8 @@
         port={{ wait_for_port }} delay=180 timeout=320 state=started
       with_items: "{{ ec2.instances }}"
 
-    - name: Add new instance to host group
-      add_host:
-        hostname: "{{job}}_{{build}}-{{ item.public_dns_name }}"
-        groupname: ec2_instances
-      with_items: "{{ ec2.instances }}"
+      #    - name: Add new instance to host group
+      #      add_host:
+      #        hostname: "{{job}}_{{build}}-{{ item.public_dns_name }}"
+      #        groupname: ec2_instances
+      #      with_items: "{{ ec2.instances }}"
