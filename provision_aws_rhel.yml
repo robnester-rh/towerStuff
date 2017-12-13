@@ -39,7 +39,7 @@
 
     - name: Export instance dns name.
       debug:
-        msg: "JENKINS_EXPORT RHEL_HOST=ec2.instances"
+        msg: "JENKINS_EXPORT RHEL_HOST={{ ec2.instances }}"
 
 
       #    - name: Add new instance to host group
