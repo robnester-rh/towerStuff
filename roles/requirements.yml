@@ -1,2 +1,1 @@
-- src: nginxinc.nginx-oss
-
+- src: nginxinc.nginx-oss,jgeusebroek.docker
