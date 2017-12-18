@@ -6,7 +6,6 @@
     duffy:
       state: "present"
       count: 1
-      key_path: /tmp/duffy.key
     register: rnester-ci
   - debug:
       var: rnester-ci
