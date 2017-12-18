@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  gather_facts: False
+  tasks:
+  - name: "provision nodes"
+    duffy:
+      state: "present"
+      count: 1
+      key_path: /tmp/duffy.key
+    register: rnester-ci
+  - debug:
+      var: rnester-ci
+  - command: 'echo "ssid: {{ rnester-ci.ssid }} -- {{ rnester-ci.hosts }}"'
+  - name: "teardown nodes from ssid"
+    duffy:
+      state: "absent"
+      ssid: "{{ rnester-ci.ssid }}"
