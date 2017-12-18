@@ -10,6 +10,7 @@
     register: rnester-ci
   - debug:
       var: rnester-ci
+      msg: "JENKINS_EXPORT RHEL_HOST={{rnester.ci}}"
   - command: 'echo "ssid: {{ rnester-ci.ssid }} -- {{ rnester-ci.hosts }}"'
   - name: "teardown nodes from ssid"
     duffy:
