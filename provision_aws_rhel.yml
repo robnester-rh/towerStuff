@@ -12,7 +12,7 @@
     ec2_instance_type: m1.small
     ec2_keypair:
     ec2_security_group: default
-    ec2_instance_count: 1
+    ec2_instance_count: "{{ count  }}"
     ec2_tag: rnester_poc
     wait_for_port: 22
     ssh_key:
